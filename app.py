@@ -74,9 +74,3 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port)
 ```
 
-**File 2:** Name it `requirements.txt` - paste this:
-```
-flask==3.0.0
-flask-cors==4.0.0
-anthropic==0.39.0
-gunicorn==21.2.0
