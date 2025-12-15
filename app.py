@@ -36,7 +36,7 @@ def get_iq_hint():
         message = client.messages.create(
             model="claude-sonnet-4-20250514",
             max_tokens=150,
-            messages=[{"role": "user", "content": f'Create a cryptic, intellectual one-sentence hint using wordplay for "{word}" (category: {category}). Do NOT say the word.'}]
+            messages=[{"role": "user", "content": f'Create a cryptic, intellectual one-sentence hint for the medical term "{word}" (category: {category}). IMPORTANT RULES: 1) Do NOT use the word "{word}" or any part of it in your hint. 2) Use clever wordplay, etymology, historical references, or lateral thinking. 3) Make it challenging but solvable - a delightful "aha!" moment. 4) Keep it witty and a little playful. Just give the hint, nothing else.'}]
         )
         return jsonify({"hint": message.content[0].text.strip()})
     except Exception as e:
